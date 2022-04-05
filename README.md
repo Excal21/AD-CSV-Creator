@@ -1,5 +1,4 @@
 # AD-CSV-Creator
-CSVDE importhoz csv fájl készítő
 
 Active Directory CSV fájl készítő
 
