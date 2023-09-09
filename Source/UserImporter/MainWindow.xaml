@@ -1,0 +1,27 @@
+﻿<Window x:Class="UserImporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserImporter"
+        mc:Ignorable="d"
+        Title="Active Directory CSV Creator" Height="363.389" Width="587.238">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="368*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="211*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listNevek" HorizontalAlignment="Left" Height="237" Margin="45,44,0,0" VerticalAlignment="Top" Width="204" IsManipulationEnabled="True"/>
+        <Label Content="Nevek" HorizontalAlignment="Left" Height="39" Margin="45,10,0,0" VerticalAlignment="Top" Width="204"/>
+        <RadioButton x:Name="rbUser" Content="User" HorizontalAlignment="Left" Height="19" Margin="302,63,0,0" VerticalAlignment="Top" Width="95" GroupName="tipus" IsChecked="True" Grid.ColumnSpan="3"/>
+        <RadioButton x:Name="rbPC" Content="PC" HorizontalAlignment="Left" Height="19" Margin="29,63,0,0" VerticalAlignment="Top" Width="138" GroupName="tipus" Grid.Column="2"/>
+        <TextBox x:Name="tbDomains" HorizontalAlignment="Left" Height="20" Margin="282,88,0,0" TextWrapping="Wrap" Text="Tartományok: altartomány.főtartomány.suffix" VerticalAlignment="Top" Width="259" Grid.ColumnSpan="3" GotFocus="tbDomains_GotFocus"/>
+        <Button Grid.ColumnSpan="3" Content="CSV generálása" HorizontalAlignment="Left" Height="37" Margin="283,212,0,0" VerticalAlignment="Top" Width="259" Click="Button_Click_1"/>
+        <Button Content="Nevek importálása" HorizontalAlignment="Left" Margin="283,161,0,0" VerticalAlignment="Top" Width="258" Grid.ColumnSpan="3" Height="36" Click="Button_Click"/>
+        <RadioButton x:Name="rbMagyar" Content="Magyar" HorizontalAlignment="Left" Margin="302,43,0,0" VerticalAlignment="Top" GroupName="nyelv" IsChecked="True"/>
+        <RadioButton x:Name="rbAngol" Content="Angol" Grid.Column="2" HorizontalAlignment="Left" Margin="29,44,0,0" VerticalAlignment="Top" GroupName="nyelv"/>
+        <TextBox x:Name="tbOU" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="21" Margin="282,122,0,0" TextWrapping="Wrap" Text="OU-k: belső&lt;külső" VerticalAlignment="Top" Width="259" GotFocus="TextBox_TextChanged"/>
+
+    </Grid>
+</Window>
